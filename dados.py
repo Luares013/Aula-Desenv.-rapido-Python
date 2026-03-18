@@ -6,4 +6,11 @@ while True:
         break
     linha.append(texto)
     
-print(linha)
+with open("meu_arquivos.txt", "w") as dados:
+    for conteudos in linha:
+        dados.write(conteudos + "\n")
+        
+
+with open("meu_arquivos.txt", "r") as dados:
+    conteudo_linha = dados.read()
+    print(conteudo_linha)
